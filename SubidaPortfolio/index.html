@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Mi Portafolio</title>
+</head>
+
+<body>
+<header>
+    <h1>Alejandro Jaime Pérez</h1>
+</header>
+
+<!--Sobre mi-->
+    <h2>Sobre mí</h2>
+    <p>Soy profesional con varios años de experiencia laboral y, tras documentarme sobre el sector,
+        me especialicé en Desarrollo de Aplicaciones Web. Disfruto creando soluciones digitales y
+        aprendiendo nuevas tecnologías; me apasiona trabajar en equipo y cada proyecto desde el primer momento. </p>
+
+<!--Proyectos-->
+    <h2>Proyectos</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Enlace</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Proyecto A</td>
+            <td>Este fue el primer proyecto que realicé, durante el primer mes desde que empecé en esto. Como se puede
+                ver, dos de mis mayores aficiones son el cine y los videojuegos, por lo que lo orienté hacia eso. Le
+                tengo un cariño especial, ya que fue la primera vez que vi funcionar algo creado por mí.</td>
+            <td><a href="https://proyectoalejandrodaw2.netlify.app/" target="_blank">Ver</a></td>
+        </tr>
+        <tr>
+            <td>Proyecto B</td>
+            <td>Descripción del proyecto B.</td>
+            <td><a href="https://ejemplo.com/b" target="_blank">Ver</a></td>
+        </tr>
+        <tr>
+            <td>Proyecto C</td>
+            <td>Descripción del proyecto C.</td>
+            <td><a href="https://ejemplo.com/c" target="_blank">Ver</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+<!--Formulario de contacto-->
+    <h2>¡Contáctame!</h2>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="Razón">Razón/Empresa (Opcional):</label>
+        <input type="text" id="Razón" name="Razón" required>
+
+        <label>
+            <input type="checkbox" name="acepto" required>
+            Acepto las condiciones.
+        </label>
+
+
+        <input type="submit" value="Enviar">
+    </form>
+
+
+<!--Pie de página-->
+<footer>
+    <p>&copy; <span id="anio"></span> Alejandro Jaime Pérez. Todos los derechos reservados.</p>
+</footer>
+
+
+<script>
+    document.getElementById('anio').textContent = new Date().getFullYear();
+</script>
+
+
+</body>
+</html>
