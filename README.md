@@ -1,19 +1,24 @@
-📌 Portfolio Profesional
+# Portfolio Profesional – [Tu Nombre]
 
-¡Hola! 👋
-Este es mi portfolio personal donde muestro algunos de los proyectos en los que he estado trabajando.
-La idea es que este espacio sirva como una carta de presentación para que cualquiera pueda ver lo que sé hacer y cómo me gusta programar/diseñar.
+Bienvenido a mi **portfolio profesional**, un espacio donde presento mis proyectos, habilidades y conocimientos adquiridos como estudiante del **[grado suprior de desarrollo de aplicaciones web]** en mi segundo año.  
+Este portfolio tiene como objetivo mostrar mi capacidad de aprendizaje, adaptación y motivación para desarrollarme profesionalmente antes de mis **FCTs**.
 
-🚀 Tecnologías usadas
+---
 
-Frontend: HTML y CSS
+## Sobre mí
 
-Otros: Git y GitHub
+Soy un estudiante de segundo año del **[grado superior de desarrollo de aplicaiones web]**, apasionado por el área del **[frontend]**.  
+Mi objetivo es aplicar los conocimientos adquiridos en clase en proyectos reales, aprendiendo de profesionales y contribuyendo al éxito de la empresa en la que realice mis prácticas.  
 
-📂 Secciones del portfolio
+**Habilidades destacadas:**
+- Desarrollo Frontend: HTML, CSS, JavaScript 
+- Control de versiones: Git y GitHub  
+- Resolución de problemas, trabajo en equipo y aprendizaje continuo  
 
-Sobre mí: un poco de quién soy y qué me motiva.
+---
+## Contacto
 
-Proyectos: listado de proyectos con links, capturas y descripciones.
+Estoy disponible para prácticas profesionales y proyectos de colaboración.  
 
-Contacto: formas de comunicarse conmigo (email, LinkedIn, etc).
+- **Email:** ajamper@gmail.com  
+- **LinkedIn:** [Mi perfil]([https://linkedin.com/in/tuusuario](https://www.linkedin.com/in/alejandro-jaime-p%C3%A9rez-0b3844348/))  
