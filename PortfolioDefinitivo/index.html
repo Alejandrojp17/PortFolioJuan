@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Alejandro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- ESTILOS PERSONALIZADOS --- */
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('media/matrixportada.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(13, 110, 253, 0.5);
+        }
+
+        /* Efecto máquina de escribir */
+        .typing-text::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* Tarjetas */
+        .card-project {
+            transition: all 0.3s ease;
+            border: none;
+            overflow: hidden;
+        }
+        .card-project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .card-project img {
+            transition: transform 0.5s ease;
+            height: 320px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .card-project:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Timeline */
+        .timeline {
+            border-left: 3px solid;
+            padding-left: 30px;
+            position: relative;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid;
+            border-radius: 50%;
+            position: absolute;
+            left: -41px;
+            top: 5px;
+        }
+
+        /* Skills */
+        .progress {
+            height: 10px;
+            border-radius: 20px;
+            background-color: #e9ecef;
+        }
+        .progress-bar {
+            border-radius: 20px;
+            background: #00d4ff;
+        }
+
+        /* Video Container - Estilo especial */
+        .video-container iframe {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+
+<nav id="navbar-example" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            <i class="fas fa-code me-2"></i>Alejandro Jaime Pérez
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre-mi">Perfil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#trayectoria">Trayectoria</a></li>
+                <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#videocv">Video CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="inicio" class="hero-section">
+    <div class="container">
+        <img src="media/perfil.png" alt="Tu Foto" class="profile-img mb-4">
+        <h1 class="display-4 fw-bold mb-3">Hola, soy Alejandro</h1>
+
+        <h3 class="mb-5 text-light opacity-75">
+            Soy <span class="text-primary fw-bold" id="typewriter"></span><span class="typing-text"></span>
+        </h3>
+
+        <div>
+            <a href="#proyectos" class="btn btn-primary btn-lg me-3 px-4 rounded-pill">Ver Portafolio</a>
+            <a href="#contacto" class="btn btn-outline-light btn-lg px-4 rounded-pill">Contactar</a>
+        </div>
+
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
+            <a href="#sobre-mi" class="text-white"><i class="fas fa-chevron-down fa-2x"></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="sobre-mi" class="py-5">
+    <div class="container py-4">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h6 class="text-primary fw-bold text-uppercase">¿Quién soy?</h6>
+                <h2 class="fw-bold mb-4">Soy un desarrollador Web en formación con ganas de aprender</h2>
+                <p class="text-muted">
+                    Actualmente cursando DAW y apasionado por todo lo que he aprendido y lo que espero aprender.
+                    Me encanta resolver problemas, transformar ideas en realidad y trabajar en equipo.
+                    Busco una oportunidad para demostrar la actitud y las ganas que tengo.
+                </p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="https://github.com/Alejandrojp17" target="_blank" class="btn btn-dark"><i class="fab fa-github me-2"></i>GitHub</a>
+                    <a href="https://www.linkedin.com/in/alejandro-jaime-p%C3%A9rez-0b3844348/" target="_blank" class="btn btn-outline-primary"><i class="fab fa-linkedin me-2"></i>LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1">
+                <h4 class="mb-4">Mis Habilidades e intereses</h4>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span>HTML5 & CSS3</span>
+                        <span class="fw-bold">90%</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span>JavaScript (ES6+)</span>
+                        <span class="fw-bold">75%</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span>PHP & MySQL</span>
+                        <span class="fw-bold">95%</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar" style="width: 95%"></div></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span>Bootstrap & Tailwind</span>
+                        <span class="fw-bold">85%</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="trayectoria" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-5">Mi Camino <span class="text-primary">Académico</span></h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="badge bg-primary mb-2">2024 - Presente</span>
+                        <h4 class="fw-bold">Técnico Superior en DAW</h4>
+                        <p class="text-muted mb-0">Medac Sevilla</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="badge bg-secondary mb-2">2018 - 2024</span>
+                        <h4 class="fw-bold">Experiencia en el mundo laboral</h4>
+                        <p class="text-muted mb-0">He trabajado como Vigilante de Seguridad o Técnico de Mantenimiento,
+                            entre otros. Me gusta hablar sobre esta etapa de mi vida, ya que aprendí mucho y adquirí una
+                            experiencia laboral variada. Es algo que parte de este sector no suele tener,
+                            ya que muchos empiezan desde muy jóvenes.
+                            Pregúntame sobre esta etapa, ¡estaré encantado de contártelo!</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="badge bg-info text-dark mb-2">2016 - 2018</span>
+                        <h4 class="fw-bold">Técnico G. Medio Telecomunicaciones</h4>
+                        <p class="text-muted mb-0">IES Heliópolis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="proyectos" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h6 class="text-primary fw-bold text-uppercase">Portfolio</h6>
+            <h2 class="fw-bold">Mis Proyectos Favoritos</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="card h-100 card-project shadow-sm">
+                    <div class="position-relative">
+                        <img src="media/Gladia.png" class="card-img-top" alt="Proyecto 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Mi Primera Web</h5>
+                        <p class="card-text text-muted">Mi primer contacto con este sector lo hice a través de una de mis pasiones.
+                            Aquí descubrí que había elegido bien lo que quería hacer en mi futuro. ¡Me encantó!</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <a href="https://proyectoalejandrodaw2.netlify.app/" target="_blank" class="btn btn-outline-dark btn-sm w-100"><i></i>Ver Web</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 card-project shadow-sm">
+                    <div class="position-relative">
+                        <img src="media/Kibo.png" class="card-img-top" alt="Proyecto 2">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Aplicación de ahorro</h5>
+                        <p class="card-text text-muted">El proyecto que me ocupa ahora mismo, una app de ahorro para jóvenes,
+                        proyecto que llevo a cabo con mis amigos, y que nos está encantando</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <a href="#" class="btn btn-outline-dark btn-sm w-100"><i class="fab fa-github me-2"></i>Ver Código</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="videocv" class="py-5">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-6 col-md-8">
+                <h2 class="fw-bold mb-3">Video Presentación</h2>
+                <p class="text-muted mb-4">Un vistazo rápido a mi perfil y motivación.</p>
+                <div class="ratio ratio-16x9 video-container border border-4 border-white">
+
+                    <video controls>
+                        <source src="media/videocvBorrar.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="fw-bold mb-3">¿Tienes un proyecto en mente? ¡Contáctame!</h2>
+                <p class="lead text-muted mb-4">Estoy disponible para prácticas o colaboraciones freelance.</p>
+                <div class="card shadow border-0">
+                    <div class="card-body p-4">
+                        <a href="https://www.linkedin.com/in/alejandro-jaime-p%C3%A9rez-0b3844348/" class="btn btn-outline-primary"><i class="fab fa-linkedin me-2"></i>LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white py-4 text-center mt-auto">
+    <div class="container">
+        <div class="mb-3">
+            <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-github"></i></a>
+            <a href="mailto:tuemail@ejemplo.com" class="text-white mx-3 fs-4"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="small opacity-50">&copy; 2025 Desarrollado con ❤️ y Bootstrap 5.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const words = ["Desarrollador Web", "Estudiante DAW", "Amante del Código", "Futuro Full Stack"];
+    let i = 0;
+    let timer;
+
+    function typeWriter() {
+        const heading = document.getElementById("typewriter");
+        const word = words[i];
+        let current = heading.textContent;
+        if (current.length < word.length) {
+            heading.textContent = word.substring(0, current.length + 1);
+            timer = setTimeout(typeWriter, 100);
+        } else {
+            setTimeout(deleteWriter, 2000);
+        }
+    }
+
+    function deleteWriter() {
+        const heading = document.getElementById("typewriter");
+        let current = heading.textContent;
+        if (current.length > 0) {
+            heading.textContent = current.substring(0, current.length - 1);
+            timer = setTimeout(deleteWriter, 50);
+        } else {
+            i = (i + 1) % words.length;
+            timer = setTimeout(typeWriter, 500);
+        }
+    }
+    typeWriter();
+</script>
+
+</body>
+</html>
